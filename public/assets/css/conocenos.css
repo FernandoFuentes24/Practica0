@@ -1,0 +1,49 @@
+
+   
+
+   /* Estilos personalizados */
+/* Estilos personalizados */
+/* Estilos personalizados */
+/* Estilos personalizados */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(175, 54, 54, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #f8f9fa; /* Color de fondo elegante */
+    border-radius: 10px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .card-text {
+    font-size: 18px;
+    color: #666666;
+  }
+  
+  .card-deck {
+    margin-top: 30px;
+  }
+  
+  .card-deck .card {
+    margin-bottom: 75px;
+  }
+  
+  @media (max-width: 768px) {
+    .card-deck {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+  
+   
+   
