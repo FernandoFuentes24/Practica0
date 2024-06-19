@@ -46,7 +46,7 @@
 
 <section class="info-section text-center">
     <div class="container">
-        <h2>Sobre Nosotros</h2>
+        <h2>Sobre Nosotros los mejores</h2>
         <p>Nos dedicamos a proporcionar la mejor experiencia de comida rápida con ingredientes de alta calidad y un servicio al cliente excepcional. ¡Ven y prueba la diferencia!</p>
         <div class="row">
             <div class="col-md-4">
