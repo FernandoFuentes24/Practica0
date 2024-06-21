@@ -13,7 +13,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire({
-                    title: "¡Formulario enviado correctamente!",
+                    title: "¡Success!",
                     text: "{{ session('success') }}",
                     icon: "success"
                 });
