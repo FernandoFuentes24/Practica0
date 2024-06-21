@@ -8,20 +8,19 @@
 @section('content') <!--Esto sirve para definir el contenido principal de la pagina el carrucel de imagenes e info adicional -->
 <div class="container mt-5">
   <!-- Mostrar mensaje de éxito si existe -->
-  @if (session('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ session('success') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+    @if (session('success'))
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    title: "¡Buen trabajo!",
+                    text: "{{ session('success') }}",
+                    icon: "success"
+                });
+            });
+        </script>
     @endif
-    @ifelse
-        <!-- Mostrar mensaje de error si existe -->
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{ session('error') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    @endif
-    
+
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
@@ -95,6 +94,8 @@
 <link rel="stylesheet" href="{{asset('assets/css/landingPage.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
 @endsection
+
+
 
 
 
