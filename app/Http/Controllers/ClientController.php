@@ -19,11 +19,14 @@ class ClientController extends Controller
             'comments' => 'required|string|max:1000',
         ]);
 
-        // Crear un nuevo cliente usando los datos validados
-        Client::create($validatedData);
+        try{
+            // Crear un nuevo cliente usando los datos validados
+            Client::create($validatedData);
+            return redirect()->route('contact')->with('success', '¡Se envio correctamente!');
 
-        // Redirigir o devolver una respuesta
-        return redirect()->route('contact')->with('success', '¡Contacto guardado exitosamente!');
+        }catch(\Exception $e){
+            return redirect()->route('contact')->with('error', '¡Ocurrio un error!');
+        }
     }
     
 }
