@@ -35,6 +35,10 @@
                 <div class="input-group">
                   <span class="input-group-text"><i class="bi bi-person"></i></span>
                   <input type="text" class="form-control" name="name" placeholder="Ingrese su nombre" required>
+                  <br>
+                  @error('name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
               </div>
               <div class="mb-3">
@@ -42,6 +46,10 @@
                 <div class="input-group">
                   <span class="input-group-text"><i class="bi bi-envelope"></i></span>
                   <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico" required>
+                  <br>
+                  @error('email')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
               </div>
               <div class="mb-3">
@@ -49,6 +57,10 @@
                 <div class="input-group">
                   <span class="input-group-text"><i class="bi bi-telephone"></i></span>
                   <input type="tel" class="form-control" name="phone" placeholder="Ingrese su número de teléfono" required>
+                  <br>
+                  @error('phone')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror  
                 </div>
               </div>
               <div class="mb-3">
@@ -56,6 +68,10 @@
                 <div class="input-group">
                   <span class="input-group-text"><i class="bi bi-calendar"></i></span>
                   <input type="date" class="form-control" name="visit_date" required>
+                  <br>
+                  @error('visit_date')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
               </div>
               <div class="mb-3">
@@ -70,6 +86,10 @@
                     <option value="4">4 - Buena</option>
                     <option value="5">5 - Excelente</option>
                   </select>
+                  <br>
+                  @error('rating')
+                    <div class="alert alert-danger">{{ $message }}</div>  
+                  @enderror
                 </div>
               </div>
               <div class="mb-3">
@@ -77,6 +97,10 @@
                 <div class="input-group">
                   <span class="input-group-text"><i class="bi bi-chat"></i></span>
                   <textarea class="form-control" name="comments" rows="4" placeholder="Ingrese sus comentarios" required></textarea>
+                  <br>
+                  @error('comments')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
               </div>
               <div class="text-center">
